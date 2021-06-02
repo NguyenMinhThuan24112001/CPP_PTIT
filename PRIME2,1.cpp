@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long pt(long long n){
+	int res;
+	for(int i=2;i<=sqrt(n);i++){
+		while(n%i==0){
+			res=i;
+			n/=i;
+		}
+	}
+	if(n>1){
+		res=n;
+	}
+	return res;
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		long long n;
+		cin>>n;
+		cout<<pt(n);
+		cout<<endl;
+	}
+}
